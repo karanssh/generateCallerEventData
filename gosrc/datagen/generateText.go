@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var letterRunes = []rune("the quick brown fox jumped over the lazy dog but could not win the race")
+var letterRunes = []rune("thequickbrownfoxjumpedoverthelazydog")
 
 // RandomStringFromRunes generates a random string of len n from given input
 func RandomStringFromRunes(n int) string {
@@ -19,10 +19,12 @@ func RandomStringFromRunes(n int) string {
 // RandomTime generates a random timestamp
 func RandomTime() string {
 	min := time.Date(2000, 1, 0, 0, 0, 0, 0, time.UTC).Unix()
-	max := time.Date(2070, 1, 0, 0, 0, 0, 0, time.UTC).Unix()
+	max := time.Date(2030, 1, 0, 0, 0, 0, 0, time.UTC).Unix()
 	delta := max - min
 
 	sec := rand.Int63n(delta) + min
-	timeGen := time.Unix(sec, 0)
-	return timeGen.String()
+	generatedTimeStamp := time.Unix(sec, 0)
+	return generatedTimeStamp.Format(createdFormat)
 }
+
+const createdFormat = "2006-01-02 15:04:05" //"Jan 2, 2006 at 3:04pm (MST)"

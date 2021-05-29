@@ -1,7 +1,7 @@
 {
     "OutputFormat": "csv",
-    "DataSetSize": 8000000,
-    "DataSetBreaker": 1000000,
+    "DataSetSize": 100000,
+    "DataSetBreaker": 10000,
     "Type1": 15,
     "Type2": 20,
     "Type3": 20,

@@ -30,3 +30,12 @@ func TestRandStringRunes(t *testing.T) {
 		})
 	}
 }
+
+func TestRandomTime(t *testing.T) {
+
+	//probably a better way to write test case exists but its pure func so no need to worry
+	got := RandomTime()
+
+	log.Printf("time generated is %s ", got)
+
+}
